@@ -1,0 +1,44 @@
+*{
+    margin: 0px;
+    padding: 0;
+
+   
+}
+
+#demo{
+    
+    border: 5px solid brown;
+    
+ 
+ 
+}
+.d1
+{
+    
+    width: 150px;
+    height: 150px;
+    background-color: black;
+   
+    
+}
+
+.d2
+{
+   
+   width: 150px;
+   height: 150px;
+    background-color: blue;
+    
+   
+}
+
+.d3
+{
+   
+   width: 150px;
+   height: 150px;
+    background-color: blueviolet;
+
+}
+        
+    
