@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button  onclick="req()">Click Here</button>
+    <script>
+
+        
+
+        function req()
+        {
+            
+            var Ajhttp=new XMLHttpRequest();
+            Ajhttp.open('GET','https://newsapi.org/v2/top-headlines?country=us&apiKey=0e0cdf75124546f99ebd87fa3d857e74',true);
+            Ajhttp.send();
+
+            Ajhttp.onreadystatechange= function ()
+            {
+                if(Ajhttp.readyState == 4 && Ajhttp.status==200)
+                {
+                    var responseData=Ajhttp.responseText;
+
+
+                    console.log(responseData);
+
+
+                    var obj=JSON.parse(responseData);
+
+                    console.log(obj.articles[0]);
+                }
+
+            }
+
+        }
+
+
+
+    </script>
+</body>
+</html>
