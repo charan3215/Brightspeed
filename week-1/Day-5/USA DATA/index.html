@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="Data()">USA DATA</button>
+
+    <script>
+        function Data()
+        {
+            var d=new XMLHttpRequest();
+            d.open('GET',"https://datausa.io/api/data?drilldowns=Nation&measures=Population");
+            d.send();
+
+            d.onreadystatechange=function()
+            {
+                if(d.readyState==4 && d.status==200)
+                {
+                    var responseData=d.responseText;
+                    // console.log(responseData);
+
+                    var Obj=JSON.parse(responseData);
+                    console.log(Obj.data[0].Nation);
+                }
+            }
+        }
+    </script>
+</body>
+</html>
