@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div1" style="border: 10px solid red; background-color: red; height: 200px;">
+        <div id="div2" style="border: 10px solid blue; background-color: blue; height: 150px;">
+            <div id="div3" style="border: 10px solid green; background-color: green; height: 100px;">
+
+            </div>
+        </div>
+    </div>
+    <script>
+        let d1=document.getElementById('div1');
+        let d2=document.getElementById('div2');
+        let d3=document.getElementById('div3');
+
+        function funcd1()
+        {
+            console.log("d1 got clicked");
+          
+        }
+
+        d1.addEventListener("click",funcd1,true);
+
+
+        function funcd2()
+        {
+            console.log("d2 got clicked");
+            // event.stopPropagation();
+        }
+
+        d2.addEventListener("click",funcd2,true);
+
+        function funcd3()
+        {
+            console.log("d3 got clicked");
+            // event.stopPropagation();
+        }
+
+        d3.addEventListener("click",funcd3,true);
+    </script>
+    
+</body>
+</html>
